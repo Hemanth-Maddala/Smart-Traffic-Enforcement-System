@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-
-const imgUrl = (url) => url ? `${url}?t=${Date.now()}` : ''
+import { apiUrl, imgUrl } from '../api'
 
 export default function AllVehicleDetails() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/results')
+    fetch(apiUrl('/api/results'))
       .then((res) => res.json())
       .then((result) => setData(result))
       .catch(() => {})

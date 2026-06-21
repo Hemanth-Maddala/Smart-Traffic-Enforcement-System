@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { apiUrl } from '../api'
 import helmetViolationImage from '../assets/helmet_violaton.png'
 import tripleRidingImage from '../assets/triple_violation.png'
 import vehicleDetailsImage from '../assets/number_plate_detection.png'
@@ -93,7 +94,7 @@ export default function StartPage({ onNavigate }) {
     try {
       const formData = new FormData()
       formData.append('file', selectedFile)
-      const res = await fetch('/api/detect', { method: 'POST', body: formData })
+      const res = await fetch(apiUrl('/api/detect'), { method: 'POST', body: formData })
       if (!res.ok) {
         const msg = await res.json().catch(() => ({}))
         throw new Error(msg.detail || 'Detection failed')

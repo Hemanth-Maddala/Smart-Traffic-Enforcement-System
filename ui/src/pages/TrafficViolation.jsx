@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-
-const imgUrl = (url) => url ? `${url}?t=${Date.now()}` : ''
+import { apiUrl, imgUrl } from '../api'
 
 function ViolationIcon({ type }) {
   if (type === 'helmet') {
@@ -41,7 +40,7 @@ export default function TrafficViolation() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/results')
+    fetch(apiUrl('/api/results'))
       .then((res) => res.json())
       .then((result) => setData(result))
       .catch(() => {})

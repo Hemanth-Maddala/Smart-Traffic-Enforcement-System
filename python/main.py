@@ -345,7 +345,7 @@ def process_image(input_path: Path) -> dict[str, Any]:
 app = FastAPI(title="Smart Traffic Enforcement API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://smart-traffic-enforcement-system.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

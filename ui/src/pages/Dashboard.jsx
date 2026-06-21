@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-
-const imgUrl = (url) => url ? `${url}?t=${Date.now()}` : ''
+import { apiUrl, imgUrl } from '../api'
 
 function Card({ title, action, children, className = '' }) {
   return (
@@ -42,7 +41,7 @@ export default function Dashboard({ onNavigate }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/results')
+    fetch(apiUrl('/api/results'))
       .then((res) => res.json())
       .then((result) => setData(result))
       .catch(() => {})

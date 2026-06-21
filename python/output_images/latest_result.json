@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "processed_at": "2026-06-21T07:11:38.399656+00:00",
+  "input_image": "/input/20260621_124137_750501_Screenshot_2026-06-21_104741.png",
+  "images": {
+    "vehicle_detection": "/output/Vehicle and Road User Detection.jpg",
+    "traffic_violation": "/output/Traffic Violation.jpg",
+    "violation_plates": "/output/violation number plates.jpg",
+    "number_plates": "/output/number plates.jpg"
+  },
+  "colors": {
+    "car": "#3b82f6",
+    "motorcycle": "#ef4444",
+    "rider": "#06b6d4",
+    "pedestrian": "#f97316",
+    "bus": "#d946ef",
+    "truck": "#a3e635",
+    "bicycle": "#22c55e",
+    "helmet_violation": "#ff9d19",
+    "triple_riding": "#ff4f78"
+  },
+  "summary": {
+    "total_vehicles": 1,
+    "total_road_users": 0,
+    "violations_detected": 0,
+    "unique_number_plates": 1
+  },
+  "detections": [
+    {
+      "key": "car",
+      "label": "Car",
+      "count": 1,
+      "average_confidence": 92.7,
+      "color": "#3b82f6"
+    },
+    {
+      "key": "motorcycle",
+      "label": "Motorcycle",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#ef4444"
+    },
+    {
+      "key": "rider",
+      "label": "Rider",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#06b6d4"
+    },
+    {
+      "key": "pedestrian",
+      "label": "Pedestrian",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#f97316"
+    },
+    {
+      "key": "bus",
+      "label": "Bus",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#d946ef"
+    },
+    {
+      "key": "truck",
+      "label": "Truck",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#a3e635"
+    },
+    {
+      "key": "bicycle",
+      "label": "Bicycle",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#22c55e"
+    }
+  ],
+  "violations": [
+    {
+      "key": "helmet_violation",
+      "label": "Helmet Violation",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#ff9d19",
+      "vehicle_type": null
+    },
+    {
+      "key": "triple_riding",
+      "label": "Triple Riding",
+      "count": 0,
+      "average_confidence": 0,
+      "color": "#ff4f78",
+      "vehicle_type": null
+    }
+  ],
+  "plates": [
+    {
+      "text": "J389NLT",
+      "confidence": 73.9,
+      "violation": "No Violation",
+      "vehicle_type": "Vehicle"
+    }
+  ],
+  "violation_plates": []
+}
